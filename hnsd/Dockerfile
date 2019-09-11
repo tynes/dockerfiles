@@ -29,7 +29,7 @@ ENTRYPOINT ["hnsd"]
 COPY --from=build /opt/hnsd/hnsd /usr/bin/hnsd
 
 # default root ns and recursive ns ports
-EXPOSE 15359 15360
+EXPOSE 15359 15359/udp 15360 15360/udp
 
 # main testnet regtest simnet
 EXPOSE 12038 13038 14038 15038
